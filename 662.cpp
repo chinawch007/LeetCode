@@ -38,7 +38,6 @@ public:
                 if(p->val < mi)mi = p->val;
                 if(p->val > ma)ma = p->val;
                 
-                cout << level << "|" << p->val << endl;
                 //靠，总是乘2超限了
                 if(p->left){p->left->val = 2 * p->val - (mi == INT32_MAX ? 0 : mi);q.push(p->left);}
                 if(p->right){p->right->val = 2 * p->val + 1 - (mi == INT32_MAX ? 0 : mi);q.push(p->right);}
